@@ -73,26 +73,26 @@ export default async function BlogPostPage({ params }: Params) {
         <section className="hero-gradient pt-32 pb-12 lg:pt-40 lg:pb-16">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-              <Link href="/" className="hover:text-[#3b8ef3]">Home</Link>
+              <Link href="/" className="hover:text-[#1a6fde]">Home</Link>
               <span>/</span>
-              <Link href="/blog" className="hover:text-[#3b8ef3]">Blog</Link>
+              <Link href="/blog" className="hover:text-[#1a6fde]">Blog</Link>
               <span>/</span>
-              <span className="text-gray-300 truncate">{post.category}</span>
+              <span className="text-gray-700 truncate">{post.category}</span>
             </nav>
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#3b8ef3] bg-[#1a6fde]/10 border border-[#1a6fde]/30 mb-4">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#1a6fde] bg-[#1a6fde]/5 border border-[#1a6fde]/20 mb-4">
               {post.category}
             </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 leading-tight text-gray-900">
               {post.title}
             </h1>
-            <p className="text-lg text-gray-400 mb-6">{post.excerpt}</p>
+            <p className="text-lg text-gray-600 mb-6">{post.excerpt}</p>
             <div className="flex items-center gap-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1a6fde] to-[#3b8ef3] flex items-center justify-center text-sm font-bold text-white">
                   {post.author.split(" ").map((n) => n[0]).join("")}
                 </div>
                 <div>
-                  <p className="text-white font-medium">{post.author}</p>
+                  <p className="text-gray-900 font-medium">{post.author}</p>
                   <p className="text-xs text-gray-500">{post.authorCredentials}</p>
                 </div>
               </div>
@@ -115,9 +115,9 @@ export default async function BlogPostPage({ params }: Params) {
               ))}
             </div>
 
-            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-[#0d1a3a] to-[#0f2247] border border-[#1a6fde]/30">
-              <h3 className="text-xl font-bold text-white mb-2">Ready to Start Streaming?</h3>
-              <p className="text-gray-300 mb-4">
+            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Start Streaming?</h3>
+              <p className="text-gray-600 mb-4">
                 Get your IPTVGOLD subscription with 18,000+ channels and 60,000+ VOD. Free 24-hour trial available.
               </p>
               <Link href="/#pricing" className="btn-primary text-white font-semibold px-6 py-3 rounded-full inline-block">
@@ -128,19 +128,19 @@ export default async function BlogPostPage({ params }: Params) {
         </section>
 
         {/* Related Posts */}
-        <section className="py-16 bg-[#070710] border-t border-[#1e1e2e]">
+        <section className="py-16 bg-gray-50 border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-extrabold mb-8">Related Articles</h2>
+            <h2 className="text-2xl font-extrabold mb-8 text-gray-900">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((rp) => (
-                <Link key={rp.slug} href={`/blog/${rp.slug}`} className="card-hover bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 group">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#3b8ef3] bg-[#1a6fde]/10 border border-[#1a6fde]/30 mb-3">
+                <Link key={rp.slug} href={`/blog/${rp.slug}`} className="card-hover bg-white border border-gray-200 rounded-2xl p-6 group shadow-sm">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold text-[#1a6fde] bg-[#1a6fde]/5 border border-[#1a6fde]/20 mb-3">
                     {rp.category}
                   </span>
-                  <h3 className="text-base font-bold text-white mb-2 group-hover:text-[#3b8ef3] transition-colors">
+                  <h3 className="text-base font-bold text-gray-900 mb-2 group-hover:text-[#1a6fde] transition-colors">
                     {rp.title}
                   </h3>
-                  <p className="text-sm text-gray-400">{rp.readTime}</p>
+                  <p className="text-sm text-gray-600">{rp.readTime}</p>
                 </Link>
               ))}
             </div>

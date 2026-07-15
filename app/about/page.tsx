@@ -80,24 +80,24 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-[#070710] border-y border-[#1e1e2e]">
+      <section className="py-16 bg-gray-50 border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-4xl lg:text-5xl font-extrabold gradient-text mb-2">7+</div>
-              <p className="text-gray-400">Years of Service</p>
+              <p className="text-gray-600 font-medium">Years of Service</p>
             </div>
             <div>
               <div className="text-4xl lg:text-5xl font-extrabold gradient-text mb-2">50K+</div>
-              <p className="text-gray-400">Customers Worldwide</p>
+              <p className="text-gray-600 font-medium">Customers Worldwide</p>
             </div>
             <div>
               <div className="text-4xl lg:text-5xl font-extrabold gradient-text mb-2">3</div>
-              <p className="text-gray-400">Continents Served</p>
+              <p className="text-gray-600 font-medium">Continents Served</p>
             </div>
             <div>
               <div className="text-4xl lg:text-5xl font-extrabold gradient-text mb-2">24/7</div>
-              <p className="text-gray-400">Customer Support</p>
+              <p className="text-gray-600 font-medium">Customer Support</p>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function AboutPage() {
       {/* Timeline */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-center mb-12">
+          <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">
             Our <span className="gradient-text">Journey</span>
           </h2>
           <div className="relative">
@@ -114,12 +114,12 @@ export default function AboutPage() {
             {milestones.map((m, i) => (
               <div key={m.year} className={`relative flex gap-6 mb-10 ${i % 2 === 0 ? "lg:flex-row-reverse" : ""}`}>
                 <div className="hidden lg:block lg:w-1/2" />
-                <div className="absolute left-4 lg:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#1a6fde] border-4 border-[#0a0a0f] z-10" />
+                <div className="absolute left-4 lg:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-[#1a6fde] border-4 border-white z-10" />
                 <div className="ml-12 lg:ml-0 lg:w-1/2 lg:px-8">
-                  <div className="bg-[#111118] border border-[#1e1e2e] rounded-xl p-6 card-hover">
+                  <div className="bg-white border border-gray-200 rounded-xl p-6 card-hover shadow-sm">
                     <span className="channel-count-badge inline-block px-3 py-1 rounded-full text-sm mb-3">{m.year}</span>
-                    <h3 className="text-lg font-bold text-white mb-2">{m.title}</h3>
-                    <p className="text-gray-400 text-sm">{m.desc}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">{m.title}</h3>
+                    <p className="text-gray-600 text-sm">{m.desc}</p>
                   </div>
                 </div>
               </div>
@@ -129,20 +129,20 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-[#070710] border-t border-[#1e1e2e]">
+      <section className="py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-center mb-12">
+          <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">
             Meet the <span className="gradient-text">Team</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {team.map((member) => (
-              <div key={member.name} className="bg-[#111118] border border-[#1e1e2e] rounded-2xl p-6 text-center card-hover">
+              <div key={member.name} className="bg-white border border-gray-200 rounded-2xl p-6 text-center card-hover shadow-sm">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#1a6fde] to-[#3b8ef3] flex items-center justify-center text-2xl font-extrabold text-white mx-auto mb-4">
                   {member.name.split(" ").map((n) => n[0]).join("")}
                 </div>
-                <h3 className="text-lg font-bold text-white">{member.name}</h3>
+                <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
                 <p className="text-sm text-[#3b8ef3] font-medium mb-3">{member.role}</p>
-                <p className="text-sm text-gray-400">{member.desc}</p>
+                <p className="text-sm text-gray-600">{member.desc}</p>
               </div>
             ))}
           </div>
@@ -152,10 +152,10 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-extrabold mb-4">
+          <h2 className="text-3xl font-extrabold mb-4 text-gray-900">
             Ready to <span className="gradient-text">Get Started</span>?
           </h2>
-          <p className="text-lg text-gray-400 mb-8">
+          <p className="text-lg text-gray-600 mb-8">
             Join 50,000+ satisfied customers streaming premium IPTV today.
           </p>
           <Link href="/#pricing" className="btn-primary text-white font-semibold px-8 py-4 rounded-full text-lg inline-block">

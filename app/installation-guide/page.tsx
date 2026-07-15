@@ -30,14 +30,14 @@ export default function InstallationGuideIndex() {
               <Link
                 key={guide.slug}
                 href={`/installation-guide/${guide.slug}`}
-                className="card-hover bg-[#111118] border border-[#1e1e2e] rounded-2xl p-8 group"
+                className="card-hover bg-white border border-gray-200 rounded-2xl p-8 group shadow-sm"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1a6fde] to-[#3b8ef3] flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
                   📺
                 </div>
-                <h2 className="text-xl font-bold text-white mb-2">{guide.device}</h2>
-                <p className="text-sm text-gray-400 mb-4">{guide.metaDescription.slice(0, 100)}...</p>
-                <span className="text-sm font-semibold text-[#3b8ef3] group-hover:text-[#5aa3ff]">
+                <h2 className="text-xl font-bold text-gray-900 mb-2">{guide.device}</h2>
+                <p className="text-sm text-gray-600 mb-4">{guide.metaDescription.slice(0, 100)}...</p>
+                <span className="text-sm font-semibold text-[#1a6fde] group-hover:text-[#3b8ef3]">
                   Read guide →
                 </span>
               </Link>

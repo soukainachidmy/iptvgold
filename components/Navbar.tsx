@@ -42,7 +42,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0a0a0f]/95 backdrop-blur-md shadow-lg shadow-blue-900/20"
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100"
           : "bg-transparent"
       }`}
     >
@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#1a6fde] to-[#3b8ef3] flex items-center justify-center font-extrabold text-white text-lg group-hover:scale-110 transition-transform">
               IG
             </div>
-            <span className="text-xl font-extrabold tracking-tight">
+            <span className="text-xl font-extrabold tracking-tight text-gray-900">
               IPTV<span className="gradient-text">GOLD</span>
             </span>
           </Link>
@@ -62,7 +62,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-[#1a6fde] transition-colors"
               >
                 {link.label}
               </Link>
@@ -73,7 +73,7 @@ export default function Navbar() {
               onMouseEnter={() => setInstallOpen(true)}
               onMouseLeave={() => setInstallOpen(false)}
             >
-              <button className="text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+              <button className="text-sm font-medium text-gray-600 hover:text-[#1a6fde] transition-colors flex items-center gap-1">
                 Installation Guides
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -81,12 +81,12 @@ export default function Navbar() {
               </button>
               {installOpen && (
                 <div className="nav-dropdown absolute top-full left-0 pt-2 w-64">
-                  <div className="bg-[#111118] border border-[#1e1e2e] rounded-xl shadow-2xl p-2">
+                  <div className="bg-white border border-gray-200 rounded-xl shadow-xl p-2">
                     {installationGuides.map((guide) => (
                       <Link
                         key={guide.href}
                         href={guide.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-[#1a6fde]/10 rounded-lg transition-colors"
+                        className="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#1a6fde] hover:bg-[#1a6fde]/5 rounded-lg transition-colors"
                       >
                         {guide.label}
                       </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
               onMouseEnter={() => setLegalOpen(true)}
               onMouseLeave={() => setLegalOpen(false)}
             >
-              <button className="text-sm font-medium text-gray-300 hover:text-white transition-colors flex items-center gap-1">
+              <button className="text-sm font-medium text-gray-600 hover:text-[#1a6fde] transition-colors flex items-center gap-1">
                 Legal
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -109,12 +109,12 @@ export default function Navbar() {
               </button>
               {legalOpen && (
                 <div className="nav-dropdown absolute top-full left-0 pt-2 w-48">
-                  <div className="bg-[#111118] border border-[#1e1e2e] rounded-xl shadow-2xl p-2">
+                  <div className="bg-white border border-gray-200 rounded-xl shadow-xl p-2">
                     {legalLinks.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="block px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-[#1a6fde]/10 rounded-lg transition-colors"
+                        className="block px-4 py-2.5 text-sm text-gray-600 hover:text-[#1a6fde] hover:bg-[#1a6fde]/5 rounded-lg transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -133,7 +133,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="lg:hidden text-gray-300"
+            className="lg:hidden text-gray-700"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -148,38 +148,38 @@ export default function Navbar() {
         </div>
 
         {open && (
-          <div className="lg:hidden pb-4 space-y-1">
+          <div className="lg:hidden pb-4 space-y-1 bg-white border-b border-gray-100 px-4 rounded-b-xl shadow-lg mt-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-[#1a6fde]/10 rounded-lg"
+                className="block px-4 py-2 text-gray-700 hover:text-[#1a6fde] hover:bg-[#1a6fde]/5 rounded-lg"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Installation Guides
             </div>
             {installationGuides.map((guide) => (
               <Link
                 key={guide.href}
                 href={guide.href}
-                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1a6fde]/10 rounded-lg"
+                className="block px-6 py-2 text-sm text-gray-700 hover:text-[#1a6fde] hover:bg-[#1a6fde]/5 rounded-lg"
                 onClick={() => setOpen(false)}
               >
                 {guide.label}
               </Link>
             ))}
-            <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+            <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
               Legal
             </div>
             {legalLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-6 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1a6fde]/10 rounded-lg"
+                className="block px-6 py-2 text-sm text-gray-700 hover:text-[#1a6fde] hover:bg-[#1a6fde]/5 rounded-lg"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
