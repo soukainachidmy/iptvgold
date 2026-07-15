@@ -92,7 +92,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
-      {/* Hero */}
+ {/* Hero */}
       <section className="hero-gradient relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#1a6fde]/20 rounded-full blur-[120px] float" />
@@ -106,12 +106,12 @@ export default function HomePage() {
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-sm font-medium text-[#3b8ef3]">99.9% Uptime — Streaming Now</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-6 text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight mb-6 text-gray-900">
                 Premium <span className="gradient-text">IPTV</span> Subscription
                 <br />
                 <span className="gradient-gold">18,000+</span> Live Channels
               </h1>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-10">
+              <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0 mb-10">
                 Stream 18,000+ live TV channels and 60,000+ VOD movies & series in stunning 4K UHD.
                 Works on Firestick, Smart TV, Android, iOS, Apple TV, and more.
               </p>
@@ -119,11 +119,11 @@ export default function HomePage() {
                 <a href="#pricing" className="btn-primary text-white font-semibold px-8 py-4 rounded-full text-lg pulse-glow">
                   View Plans & Pricing
                 </a>
-                <a href="#trial" className="border border-[#1a6fde]/40 text-white font-semibold px-8 py-4 rounded-full text-lg hover:bg-[#1a6fde]/10 transition-colors">
+                <a href="#trial" className="border border-[#1a6fde]/40 text-gray-900 font-semibold px-8 py-4 rounded-full text-lg hover:bg-[#1a6fde]/10 transition-colors">
                   Get Free 24h Trial
                 </a>
               </div>
-              <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-8 text-gray-500">
+              <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-8 text-gray-600">
                 <div className="flex items-center gap-2"><span className="text-[#3b8ef3]">✓</span> No Contracts</div>
                 <div className="flex items-center gap-2"><span className="text-[#3b8ef3]">✓</span> Instant Activation</div>
                 <div className="flex items-center gap-2"><span className="text-[#3b8ef3]">✓</span> 24/7 Support</div>
