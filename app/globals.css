@@ -16,7 +16,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
-body {s
+body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   font-family: var(--font-inter), sans-serif;
