@@ -3,14 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://iptvgold-xi.vercel.app"),
   title: {
@@ -34,8 +32,8 @@ export const metadata: Metadata = {
   publisher: "IPTVGOLD",
   robots: { index: true, follow: true },
   verification: {
-  google: "-0d4UHdgoVhqseIlqVp9C2URdr7iLyJhyr27PCvmjBw",
-}
+    google: "-0d4UHdgoVhqseIlqVp9C2URdr7iLyJhyr27PCvmjBw",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -53,7 +51,6 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "https://iptvgold-xi.vercel.app" },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -62,7 +59,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "IPTVGOLD",
     url: "https://iptvgold-xi.vercel.app",
-    logo: "https://iptvgold.com/icon.svg",
+    logo: "https://iptvgold-xi.vercel.app/icon.svg",
     description:
       "Premium IPTV subscription provider with 18,000+ live channels and 60,000+ VOD.",
     sameAs: [
@@ -71,7 +68,6 @@ export default function RootLayout({
       "https://www.instagram.com/iptvgold",
     ],
   };
-
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
