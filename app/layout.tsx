@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iptvgold.com"),
+  metadataBase: new URL("https://iptvgold-xi.vercel.app"),
   title: {
     default: "IPTVGOLD — Premium IPTV Subscription | 18,000+ Live Channels in 4K",
     template: "%s | IPTVGOLD",
@@ -33,10 +33,13 @@ export const metadata: Metadata = {
   creator: "IPTVGOLD",
   publisher: "IPTVGOLD",
   robots: { index: true, follow: true },
+  verification: {
+  google: "-0d4UHdgoVhqseIlqVp9C2URdr7iLyJhyr27PCvmjBw",
+}
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://iptvgold.com",
+    url: "https://iptvgold-xi.vercel.app",
     siteName: "IPTVGOLD",
     title: "IPTVGOLD — Premium IPTV Subscription | 18,000+ Live Channels",
     description:
@@ -48,7 +51,7 @@ export const metadata: Metadata = {
     description:
       "18,000+ live channels, 60,000+ VOD, 4K UHD quality. All devices supported.",
   },
-  alternates: { canonical: "https://iptvgold.com" },
+  alternates: { canonical: "https://iptvgold-xi.vercel.app" },
 };
 
 export default function RootLayout({
@@ -58,7 +61,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "IPTVGOLD",
-    url: "https://iptvgold.com",
+    url: "https://iptvgold-xi.vercel.app",
     logo: "https://iptvgold.com/icon.svg",
     description:
       "Premium IPTV subscription provider with 18,000+ live channels and 60,000+ VOD.",
