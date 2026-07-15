@@ -3,7 +3,7 @@ import { installationGuides } from "@/lib/guides";
 import { blogPosts } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://iptvgold.com";
+  const baseUrl = "https://iptvgold-xi.vercel.app";
   const lastModified = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

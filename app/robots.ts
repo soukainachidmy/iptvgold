@@ -16,6 +16,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://iptvgold.com/sitemap.xml",
+    sitemap: "https://iptvgold-xi.vercel.app/sitemap.xml",
   };
 }
